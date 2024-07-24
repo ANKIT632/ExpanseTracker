@@ -1,9 +1,19 @@
+'use client'
+
+import ExpanseData from "./components/expanseData";
+import AddExpanse from "./components/addExpanse";
+import Layout from "./components/layout";
 
 
-function Home() {
+function page() {
   return (
-    <div className="text-red-500">Home</div>
+  <Layout>
+      <ExpanseData/>
+      <AddExpanse/>
+  </Layout>   
+
+
   )
 }
 
-export default Home;
+export default page
