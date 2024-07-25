@@ -6,7 +6,7 @@ function addExpanse() {
 
       <div className="p-3 border">
         <header className="font-bold text-blue-500 text-right  pb-2">Add Expanse</header>
-        <form className="max-sm:w-[80%] flex flex-col gap-2 sm:w-[60%] lg:w-[400px]">
+        <form className="max-sm:w-[80%] flex flex-col gap-2 sm:w-[60%] lg:w-[400px]"> 
 
           <div className="flex flex-col gap-1">
             <label htmlFor="expanseName" className="text-xs font-semibold">Expanse Name</label>

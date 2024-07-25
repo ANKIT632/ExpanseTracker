@@ -1,11 +1,11 @@
 'use client'
 
 
-function addExpanse() {
+function expanseData() {
   return (
-    <div className="">addExpanse</div>
+    <div className="">expanseData</div>
 
   )
 }
 
-export default addExpanse
+export default expanseData;
