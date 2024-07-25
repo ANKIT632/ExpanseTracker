@@ -3,7 +3,7 @@
 
 function expanseData() {
   return (
-    <div className="">expanseData</div>
+    <div className="">expanse</div>
 
   )
 }
