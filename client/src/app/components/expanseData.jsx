@@ -1,33 +1,30 @@
 'use client'
+import { useState } from "react";
 
-function addExpanse() {
+function expanseData() {
+
+
+  const [exFilter, setExFilter] = useState('weekly');
+  const [showFilter, setShowFilter] = useState(false);
+
+  
+
   return (
-    <div className="m-1 mt-3 flex justify-center">
+    <div className="w-full">
+      <header className="font-mono font-bold text-xl">Expanse Details</header>
 
-      <div className="p-3 border">
-        <header className="font-bold text-blue-500 text-right  pb-2">Add Expanse</header>
-        <form className="max-sm:w-[80%] flex flex-col gap-2 sm:w-[60%] lg:w-[400px]"> 
+      <div className=" flex justify-between px-3 relative"><p>{exFilter + " " + "Expenses"}</p> <button className="text-sm rounded-md border p-0.5 px-2 hover:bg-gray-100 active:bg-gray-200 " onClick={() => setShowFilter((pre) => !pre)}><p>Filter</p></button>
 
-          <div className="flex flex-col gap-1">
-            <label htmlFor="expanseName" className="text-xs font-semibold">Expanse Name</label>
-            <input id="expanseName" name="expanseName" placeholder="Expanse Name" className="outline-none border border-gray-300 inset-2 py-0.5 pl-2 text-sm focus:border-blue-400  rounded-sm" />
-          </div>
+        {showFilter && <ul className="absolute right-2 top-7 text-[13px] border p-1 rounded-md ">
+          <li className="border-b py-0.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer px-2">weekly</li>
+          <li className="border-b  py-0.5 hover:bg-gray-100 active:bg-gray-200 cursor-pointer px-2">Monthly</li>
+          <li className=" py-0.5 hover:bg-gray-100 active:bg-gray-200 px-2 cursor-pointer">Yearly</li>
+        </ul>}
 
-          <div className="flex flex-col gap-1">
-            <label htmlFor="expanseCost" className="text-xs font-semibold">Expanse cost</label>
-            <input type="number" id="expanseCost" name="expanseCost" placeholder="Expanse Cost" className="outline-none border border-gray-300 inset-2 py-0.5 pl-2 text-sm focus:border-blue-400 rounded-sm" />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="category" className="text-xs font-semibold">Category</label>
-            <input id="category" name="category" placeholder="Expanse Category" className="outline-none border border-gray-300 inset-2 py-0.5 pl-2 text-sm focus:border-blue-400 rounded-sm" />
-          </div>
-
-        </form>
       </div>
-
     </div>
+
   )
 }
 
-export default addExpanse
+export default expanseData;
